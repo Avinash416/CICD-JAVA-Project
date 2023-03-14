@@ -9,7 +9,7 @@ pipeline{
                     sh './gradlew sonar --warning-mode all'
                 }
                 timeout(time:1, unit:'HOURS'){
-                    def qg=waitforQualityGate()
+                    def qg= waitForQualityGate()
                     if(qg.status != 'ok'){
                         error "Pipeline aborted due to quality gate failure: ${qg.status}"
                     }
