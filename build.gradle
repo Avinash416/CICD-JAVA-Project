@@ -22,7 +22,10 @@ dependencies {
 }
 
 test {
-	useJUnitPlatform()
+   // select test framework before configuring options
+   useJUnitPlatform()
+   options {
+   }
 }
 
 
